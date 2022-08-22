@@ -10,7 +10,7 @@ print(john + jimmy)
 # /* i swear if there's any more syntax sugar
 # i'm gonna die from diabetes */
 # why doesn't python do anything consistent
-# i swear if i can't do some more advanced
+# i swear if i can't do some more advanced stuff
 # i'm gonna have to put here be dragons everywhere
 
 def foo():
