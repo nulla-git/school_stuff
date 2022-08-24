@@ -4,10 +4,13 @@ fox = " A Lazy Fox sleeps under a Tree."
 hello = "Hello, World!"
 x = "Tree" in fox
 y = "Lazy" not in fox
-a = "Red"
-b = "Apple"
+amount = 7
+color = "Red"
+fruit = "Apple"
 apple = "The apple is "
 apple_format = "The apple is {}"
+order = "I would like {} {} {}s, please."
+order_ordering = "Are you sure that {2} number {0} is {1}?"
 
 print("Hello")
 print('Hello')
@@ -31,8 +34,29 @@ print(hello.split(","))
 print("-----------")
 print(x)
 print(y)
-print(a + b)
-print(a + " " + b)
+print(color + fruit)
+print(color + " " + fruit)
 
-print(apple + a)
-print(apple_format.format(a))
+print(apple + color)
+print(apple_format.format(color))
+
+print(order.format(amount, color, fruit))
+print(order_ordering.format(amount, color, fruit))
+
+print("-----------")
+
+input_name = input("Enter your name: ")
+
+print("Hello, " + input_name)
+
+print("-----------")
+
+pla = input("input value: ")
+print(pla)
+
+print("-----------")
+
+foo = input("your name: ")
+print("hi " + foo + ".")
+bar = input("age: ")
+print("you're " + str(bar) + "? that's pretty cool " + foo + ".")
