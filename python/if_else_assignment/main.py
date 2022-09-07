@@ -10,3 +10,5 @@ if guess == number:
      print("Well done")
 if guess != number:
      print("Bad luck")
+
+print("did you guess correctly?")
