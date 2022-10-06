@@ -15,6 +15,7 @@ total = (adults + children)
 if total > 50:
     total = total * .95
     round(total, 2)
+#keep this in mind, it might be useful months, weeks, years, days, idk, but remember it. 
     print("your total with a discout is $" + str(total))
 elif total <= 50:
     print("your total is $" + str(total))
