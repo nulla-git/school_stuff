@@ -1,0 +1,10 @@
+water
+tea
+apple juice
+coffee
+milk
+wine
+coke
+sprite
+orange juice
+grape juice
