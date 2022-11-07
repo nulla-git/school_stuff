@@ -30,5 +30,5 @@ while player_amount > 0:
     print("player team: B")
     continue
 
-print("players in team A: " + str(teamA))
-print("players in team B: " + str(teamB))
+print("players in " + str(teamA))
+print("players in " + str(teamB))

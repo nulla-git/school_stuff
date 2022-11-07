@@ -1,6 +1,6 @@
-Red
-Blue
-Yellow
-Green
-Orange
-Purple
+Red team
+Blue team
+Yellow team
+Green team
+Orange team
+Purple team
