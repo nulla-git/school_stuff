@@ -13,6 +13,8 @@ yuck_rand = random.choices(yuck)
 print("random item from yum: " + str(yum_rand))
 print("random item from yuck: " + str(yuck_rand))
 
+print("amount of items in both lists: " + str(len(yum) + (len(yuck))))
+
 
 """
 print("here's some drinks that i like: ")
