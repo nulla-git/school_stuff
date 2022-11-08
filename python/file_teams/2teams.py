@@ -1,5 +1,5 @@
 #blake reneau 11/04/22
-#team manager
+#manager for 2 teams
 import random
 
 foo = open("players.txt", "r")
@@ -30,5 +30,9 @@ while player_amount > 0:
     print("player team: B")
     continue
 
+print("")
+print("players in red team: " + str(len(teamA)))
+print("players in blue team: " + str(len(teamB)))
+print("--------")
 print("players in " + str(teamA))
 print("players in " + str(teamB))

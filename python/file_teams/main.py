@@ -28,3 +28,6 @@ while player_amount > 0:
     team_num = random.randrange(0, team_amount)
     team_name = teams[team_num]
     print("team name: " + team_name)
+#    if pointer < 2
+#    selected_player.insert(pointer)
+    
