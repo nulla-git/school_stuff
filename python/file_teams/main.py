@@ -1,6 +1,7 @@
 #blake reneau 11/04/22
 #team manager
 import random
+import pandas
 
 foo = open("players.txt", "r")
 bar = open("teams.txt", "r")
@@ -11,12 +12,12 @@ teams = bar.read().splitlines()
 player_amount = len(players)
 team_amount = len(teams)
 playersInTeam = (player_amount // team_amount)
-red = []
-blue = []
-yellow = []
-green = []
-orange = []
-purple = []
+Red_team = []
+Blue_team = []
+Yellow_team = []
+Green_team = []
+Orange_team = []
+Purple_team = []
 
 while player_amount > 0:
     player_num = random.randrange(0, player_amount)
@@ -27,7 +28,7 @@ while player_amount > 0:
     print("player amount: " + str(player_amount))
     team_num = random.randrange(0, team_amount)
     team_name = teams[team_num]
-    print("team name: " + team_name)
-#    if pointer < 2
-#    selected_player.insert(pointer)
-    
+    print("team name: " + str(team_name))
+    if (team_name) < playersInTeam:
+        relected_player.insert(str(team_name))
+        print(str(team_name))
