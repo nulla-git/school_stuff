@@ -30,10 +30,14 @@ typingPrint("***********************************************************\n")
 
 while True:
     decision = typingInput("what do you want to do? ")
-    if decision == 'look' or decision == 'look around':
+    if decision == 'look' or decision == 'look around' or decision == 'explore':
         typingPrint("you are in a prison cell with an open door.")
         time.sleep(4)
         os.system("clear")
+    else: decision != 'look' or decision != 'look around' or decision != 'explore'
+    typingPrint("invalid choice!")
+    time.sleep(4)
+    os.system("clear")
     if decision == 'escape' or decision == 'walk out' or decision == 'go out' or decision == 'get out' or decision == 'walk outside':
         typingPrint("you win!")
         time.sleep(4)
