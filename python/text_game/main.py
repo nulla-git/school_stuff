@@ -28,21 +28,25 @@ typingPrint("*                                                         *\n")
 typingPrint("*                                                         *\n")
 typingPrint("***********************************************************\n")
 
+decision_notValid = False
 while True:
     decision = typingInput("what do you want to do? ")
     if decision == 'look' or decision == 'look around' or decision == 'explore':
+        decision_notValid = False
         typingPrint("you are in a prison cell with an open door.")
         time.sleep(4)
         os.system("clear")
-    else: decision != 'look' or decision != 'look around' or decision != 'explore'
-    typingPrint("invalid choice!")
-    time.sleep(4)
-    os.system("clear")
-    if decision == 'escape' or decision == 'walk out' or decision == 'go out' or decision == 'get out' or decision == 'walk outside':
+        continue
+    if decision == 'escape' or decision == 'walk out' or decision == 'go out' or decision == 'get out' or decision == 'walk outside' or decision =='leave':
         typingPrint("you win!")
         time.sleep(4)
         os.system("clear")
         break
+    decision_notValid = True
+    if decision_notValid == True:
+        typingPrint("invalid choice!")
+        time.sleep(4)
+        os.system("clear")
 
 for character in 'thank you for playing!\ncredits: blake reneau\n':
     sys.stdout.write(character)
