@@ -5,20 +5,21 @@ import random
 
 colors = ["red", "blue", "yellow", "green", "orange", "black"]
 
-circler = turtle.Turtle()
+#circler = turtle.Turtle()
 rand_drawer = turtle.Turtle()
 rand_drawer.pensize(5)
 
 # just goofin around here
+'''
 circler.pensize(5)
 circler.color("green", "red")
 circler.begin_fill()
 circler.circle(50)
 circler.end_fill()
-
+'''
 rand_drawer.speed(0)
 
-for x in range(5):
+for x in range(8):
     randColor = random.randrange(0, len(colors))
     rand_drawer.penup()
     rand1 = random.randrange(-300, 300)
