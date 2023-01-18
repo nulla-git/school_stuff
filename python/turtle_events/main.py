@@ -6,9 +6,8 @@ import random
 
 Xpos = 0
 Ypos = 0
-
 tim = turtle.Turtle()
-tim.speed(4)
+tim.speed(1)
 tim.circle(45)
 tim.penup()
 tim.setheading(270)
@@ -25,10 +24,16 @@ tim.forward(60)
 
 def up():
     tim.clear()
-    Ypos = Ypos + 50
-    tim.setpos(((Xpos + 45), (Ypos + 45)))
+    tim.penup()
+    Xpos = 0
+    Ypos = 0
+    Ypos += 50
+    tim.setpos(((Xpos), (Ypos)))
+    tim.pendown()
     tim.circle(45)
     tim.penup()
+    tim.setpos(((Xpos + 45), (Ypos + 45)))
+    tim.pendown()
     tim.setheading(270)
     tim.pendown()
     tim.forward(45)
@@ -42,6 +47,7 @@ def up():
 
 turtle.listen()
 turtle.onkey(up, "Up")
+
 
 turtle.mainloop()
 

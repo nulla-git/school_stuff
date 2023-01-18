@@ -12,4 +12,5 @@ numbers.insert(0, num3)
 numbers.sort()
 
 print("the smallest number is " + str(numbers[0]) )
+print("the middle number is " + str(numbers[1]) )
 print("the largest number is " + str(numbers[2]) )
