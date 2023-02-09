@@ -1,6 +1,7 @@
 #I didn't write most of this, my teacher is having
 #me write this to learn.
 import os
+#clears the screen
 os.system('clear')
 
 print("############################")
