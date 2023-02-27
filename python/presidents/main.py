@@ -4,14 +4,13 @@ import os
 
 os.system('clear')
 
-#class sort:
-#    def __init__(self, firstname, lastname, beginyear, endyear):
-
 years = []
 names = []
 yearInput = int(input("Enter a year between 1789 and 2025 to get the previous, current, and next president of that year: "))
 presidents = open("presidents.txt", "r")
-print(yearInput)
+
+increment = 0
+yearincrement = 0
 
 for rawdata in presidents:
     data = rawdata.split(";")
@@ -22,7 +21,11 @@ for rawdata in presidents:
     years.append(beginningYear)
     years.append(endingYear)
     if yearInput <= endingYear and yearInput >= beginningYear:
+        print(names[increment-1] + ": from " + str(years[yearincrement-2]) + " to " + str(years[yearincrement]))
         print(name + ": from " + str(beginningYear) + " to " + str(endingYear) )
-    else: yearInput > endingYear
-    print(name + ": from " + str(beginningYear) + " to " + str(endingYear) )
-    break
+        continue
+    yearincrement +=2
+    increment += 1
+    if yearInput < endingYear:
+        print(name + ": from " + str(beginningYear) + " to " + str(endingYear) )
+        break
