@@ -5,12 +5,19 @@ import os
 
 os.system('clear')
 question_type = random.randrange(0, 4)
-quote_pick = random.randrange(0, 5)
 num1 = random.randrange(1, 100)
 num2 = random.randrange(1, 100)
-print(quote_pick)
 quotes = open("quotes.txt", "r")
-words = open("spanish_words.txt", "r")
+with quotes as fp:
+    #value of variable is equal to the amount of lines, of which each line
+    #has a value of one.
+    num_lines = sum(1 for line in fp)
+quotes = open("quotes.txt", "r")
+print(num_lines)
+quote_pick = random.randrange(0, num_lines)
+print(quote_pick)
+
+print(quotes.readlines()[8])
 
 print("####################")
 print("# Quote of the day #")
@@ -21,7 +28,7 @@ quotes.close
 print("###########################")
 print("# Spanish word of the day #")
 print("###########################")
-
+words = open("spanish_words.txt", "r")
 print(words.readlines()[quote_pick])
 words.close
 
@@ -43,6 +50,7 @@ print("# Add Your Own Quote   #")
 print("########################")
 append_text = input("Input Here: ")
 quote_append = open("quotes.txt", "a")
+quote_append.write("\n")
 quote_append.write(append_text)
 quote_append.close
 
