@@ -1,4 +1,4 @@
-# Blake Reneau 03/22/23
+# Ms. Jones, 03/22-24/23, minor changes by Blake Reneau
 # Example of the birthday paradox
 import datetime
 import random
@@ -18,18 +18,22 @@ names = ["John", "Jane", "Steve", "Alex", "Bob", "Bill", "Jennifer", "Jim", "Jac
 total = 0
 tests = 10
 
+#repeat this loop for as many tests we need
 for k in range(0,tests):
     print("\n" + "---------------------")
     birthdayList = []
     
     message = ""
+    # for every name we have, run this loop to get a random date and turn it into a string
     for i in range(0,len(names)):
         birthDate = randomDate()
         birthDay = birthDate.strftime('%d %b')
+        # for every birthday there is, run this loop and check if the latest one generated is the same as any others in the loop,
+        # if it is, have variable message create a message for which two people have the same birthday, and what birthday that would be.
         for j in range(1,len(birthdayList)):
             if birthdayList[j] == birthDay:
-                message = message + names[i] + " and " + names[j] + " share the same birthday: " + birthDay
-                
+                message = message + names[i] + " and " + names[j] + " share the same birthday: " + birthDay + ". " # the space is here in case multiple student share the same birthday.
+               
         birthdayList.append(birthDay)
         print(names[i] + " - Birthday: " + birthDay)
 
@@ -40,4 +44,5 @@ for k in range(0,tests):
         total = total + 1
         print("---------------------")
 
-print("\n" + "\n" + "Overall result after " + str(tests) + " tests: " + str((total*100/tests)) + "%")
+# calculate the chance of a student having the same birthday as another and print it out here.
+print("\n" + "\n" + "Overall result after " + str(tests) + " tests: " + str((total/tests) * 100) + "%")
