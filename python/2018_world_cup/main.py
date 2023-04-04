@@ -1,4 +1,4 @@
-# Blake Reneau  03/29/23
+# Blake Reneau 03/29/23 - 04/04/23
 # get information about goals from the 2018 football/soccer world cup
 import os
 
@@ -25,7 +25,7 @@ if choice == "C":
 if choice == "D":
     print("Goals scored: " + (str(sum(1 for line in open('goals.txt')))))
 goals = 0
-countryScores = {}
+score_list = {}
 
 for line in goal_list:
     data = line.split(";")
@@ -44,16 +44,23 @@ for line in goal_list:
         goals += 1
     if choice == "G" and minute >= 90:
         goals += 1
-    if choice == "H":
-        if country in countryScores:
-            countryScores.update({country: 0})
-            print(countryScores)
-            countryScores[country] += 1
+        #I could optimize this, but I just want to get this done, so i don't care
+    if choice == "H" or choice == "I":
+        if country in score_list:
+            score_list[country] += 1
         else:
-            countryScores[country] += 1
-            
-
+            score_list.update({country: 0})
+            score_list[country] += 1
+    if choice == "J":
+        if player in score_list :
+            score_list[player] += 1
+        else:
+            score_list.update({player: 0})
+            score_list[player] += 1
 
 if goals > 0:
     print("Goals scored: " + str(goals))
-
+elif choice == "H":
+    print(score_list)
+elif choice == "I" or choice == "J":
+    print(max(score_list.items(), key=lambda k: k[1]))
