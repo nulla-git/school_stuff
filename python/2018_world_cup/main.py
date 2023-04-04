@@ -12,6 +12,9 @@ print("D: number of goals from all countries")
 print("E: number of goals scored during first half")
 print("F: number of goals scored during second half")
 print("G: number of goals scored during overtime")
+print("H: goals scored for each country")
+print("I: Country with most goals")
+print("J: Player with most goals")
 print("X: exit")
 choice = input("choose: ")
 if choice == "A" or choice == "B" or choice == "C":
@@ -22,6 +25,7 @@ if choice == "C":
 if choice == "D":
     print("Goals scored: " + (str(sum(1 for line in open('goals.txt')))))
 goals = 0
+countryScores = {}
 
 for line in goal_list:
     data = line.split(";")
@@ -40,6 +44,15 @@ for line in goal_list:
         goals += 1
     if choice == "G" and minute >= 90:
         goals += 1
+    if choice == "H":
+        if country in countryScores:
+            countryScores.update({country: 0})
+            print(countryScores)
+            countryScores[country] += 1
+        else:
+            countryScores[country] += 1
+            
+
 
 if goals > 0:
     print("Goals scored: " + str(goals))
