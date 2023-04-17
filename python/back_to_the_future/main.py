@@ -4,7 +4,6 @@ import calendar
 from datetime import *
 
 now = datetime.now()
-print(now)
 print("today is " + now.strftime("%A, %b %dnd/rd/th, %Y"))
 
 travel_time = float(input("how many days forward, a positive number, or backwards, a negative number,\nwould you like to travel in time? "))
