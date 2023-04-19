@@ -12,9 +12,10 @@ month = int(dateSplit[1])
 year = int(dateSplit[2])
 birthday = date(year,month,day)
 birthdayMonthDay = [month, day]
-nextBirthday = date((year + 1), month, day)
+nextBirthday = date((now.year + 1), month, day)
+print(nextBirthday)
 dayDifference = (now - birthday).days
-nextBirthdayDifference = (nextBirthday - birthday).days
+nextBirthdayDifference = (nextBirthday - now).days
 yearDifference = (now.year - birthday.year)
 print("you are " +str(yearDifference) + " years old.")
 print("you were born on a " + str(calendar.day_name[datetime.weekday(birthday)]))
